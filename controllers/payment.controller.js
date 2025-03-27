@@ -4,8 +4,7 @@ import {initiatePay, paymentStatus} from "../services/fapshiApi.js"; // Import t
 // Initiate payment
 export const initiatePayment = async (req, res) => {
   try {
-    const { amount, email, userId, externalId, redirectUrl, message } =
-      req.body;
+    const { amount, email, userId, externalId, redirectUrl, message } = req.body;
 
     // Validate input data
     if (!amount || !email || !userId || !externalId || !redirectUrl) {
